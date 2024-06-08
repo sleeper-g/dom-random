@@ -1,3 +1,12 @@
 body {
     color: #a21010;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.mob {
+    background-image: url('../img/goblin.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
