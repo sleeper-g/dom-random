@@ -12,3 +12,9 @@ build_script:
   - npm run build
 test_script:
   - npm run lint && npm run test
+deploy_script:
+  - git config --global credential.helper store
+  - git config --global user.name sleeper-g
+  - git config --global user.email green.sleeper1@gmail.com
+  - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > "$HOME/.git-credentials"
+  - npx push-dir --dir=dist --branch=gh-pages --force --verbose
