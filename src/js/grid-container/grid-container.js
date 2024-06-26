@@ -1,7 +1,7 @@
-import './grid-container.css'
+import "./grid-container.css";
 export default class GridContainer {
-  constructor( element ) {
-    this._element = element
+  constructor(element) {
+    this._element = element;
   }
 
   generateGrid(rows, columns) {
@@ -9,9 +9,9 @@ export default class GridContainer {
       for (let indexColumn = 0; indexColumn < columns; indexColumn++) {
         const item = document.createElement("div");
         item.className = "grid-item";
-        item.dataset["id"] = `${rows*indexRow+indexColumn}`;
+        item.dataset["id"] = `${rows * indexRow + indexColumn}`;
         this._element.appendChild(item);
-      };
-    };
-  };
+      }
+    }
+  }
 }
